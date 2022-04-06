@@ -67,7 +67,7 @@ function buildCharts(sample) {
       orientation: "h",
       backgroundColor: "rgb(192, 189, 189)"
     };
-    // Create the layout for the bar chart.
+    // Create bar chart.
     var barLayout = {
       title: {
         text: "<b>Top 10 Bacteria Cultures Found</b>",
@@ -81,7 +81,7 @@ function buildCharts(sample) {
         pad: 4
       },
     };
-    // Use Plotly to plot the data with the layout.
+    // Use Plotly to plot the data.
     Plotly.newPlot("bar", [barData], barLayout);
 
   // Create the trace for the bubble chart.
@@ -94,7 +94,7 @@ function buildCharts(sample) {
     mode: "markers",
     marker: {size: sampleValue, color: otuID, colorscale: "Earth"}
   };
-  // Create the layout for the bubble chart.
+  // Create the bubble chart.
   var bubbleLayout = {
     title: {
       text: "<b>Bacteria Cultures Per Sample</b>",
@@ -110,6 +110,6 @@ function buildCharts(sample) {
     },
     hovermode: "closest"
   };
-  // Use Plotly to plot the data with the layout.
+  // Use Plotly to plot the data.
   Plotly.newPlot("bubble", [bubbleData], bubbleLayout);
   })}
